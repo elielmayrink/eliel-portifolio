@@ -152,6 +152,7 @@ section .title {
   width: 100%;
   max-width: 970px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 3rem;
   background-color: #302f3d;
