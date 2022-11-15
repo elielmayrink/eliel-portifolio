@@ -40,7 +40,7 @@ consectetur iure, reprehenderit molestiae fugiat molestias
   </div>`;
     projects.appendChild(project);
   }
-  console.log(response);
 }
 projects.addEventListener("load", getGithubRepos());
+
 // getGithubRepos();
