@@ -2,7 +2,7 @@
 let projects = document.querySelector("#projects");
 async function getGithubRepos() {
   const username = "elielmayrink";
-  const res = await fetch(`http://api.github.com/users/${username}/repos`);
+  const res = await fetch(`https://api.github.com/users/${username}/repos`);
   const response = await res.json();
   for (let i = 0; i < response.length; i++) {
     const project = document.createElement("div");
