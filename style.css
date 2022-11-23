@@ -129,6 +129,21 @@ main aside .experiences .experience-container p {
 main aside .experiences .experience-container span {
   font-size: 1.2rem;
 }
+main aside .jobs {
+  padding-left: 20px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+main aside .jobs .jobs-container {
+  margin-top: 10px;
+  padding-left: 20px;
+}
+
+main aside .jobs .jobs-container ul li {
+  margin-top: 0.5rem;
+}
+
 main aside .education {
   padding-left: 20px;
   padding-top: 30px;
