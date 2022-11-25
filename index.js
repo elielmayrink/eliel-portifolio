@@ -1,4 +1,5 @@
 "use strict";
+
 let projects = document.querySelector("#projects");
 async function getGithubRepos() {
   const username = "elielmayrink";
@@ -57,3 +58,13 @@ ${
   }
 }
 projects.addEventListener("load", getGithubRepos());
+document.querySelectorAll("input[type='radio']").forEach(function (input) {
+  input.onclick = function () {
+    console.log("aqui");
+    document.documentElement.classList.remove(
+      ...document.documentElement.classList
+    );
+
+    document.documentElement.classList.add(input.id);
+  };
+});

@@ -3,9 +3,40 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+.light {
+  --bg-color: #fffffe;
+  --text-color: #0d0d0d;
+  --bg-card: #eff0f3;
+  --bg-techs: #d9376e;
+  --techs-text: #0d0d0d;
+}
+:root {
+  --bg-color: #fffffe;
+  --text-color: #0d0d0d;
+  --bg-card: #eff0f3;
+  --bg-techs: #d9376e;
+  --techs-text: #0d0d0d;
+}
+
+.dark {
+  --bg-color: #22212c;
+  --text-color: #837e9f;
+  --bg-card: #302f3d;
+  --bg-techs: #cb92b1;
+  --techs-text: #000000;
+}
+:root:has(#dark:checked) {
+  --bg-color: #22212c;
+  --text-color: #837e9f;
+  --bg-card: #302f3d;
+  --bg-techs: #cb92b1;
+  --techs-text: #000000;
+}
+
 html {
   font-size: 62.5%;
-  color: #837e9f;
+  color: var(--text-color);
   font-family: "Merriweather sans";
 }
 p,
@@ -16,7 +47,7 @@ span {
 }
 a {
   text-decoration: none;
-  color: #837e9f;
+  color: var(--text-color);
 }
 h2,
 h3 {
@@ -26,15 +57,26 @@ h3 {
 }
 
 main {
-  background-color: #22212c;
+  background-color: var(--bg-color);
   width: 100%;
-
   padding: 4rem;
+  padding-top: 10rem;
   display: flex;
   justify-content: center;
+  transition: 0.3s ease-in;
   gap: 6rem;
 }
-
+main .swith-theme {
+  display: flex;
+  gap: 10px;
+  position: fixed;
+  right: 10px;
+  top: 10px;
+}
+main .swith-theme .swith {
+  display: flex;
+  align-items: center;
+}
 /* Estilo lateral esquerda da pg */
 main aside {
   display: flex;
@@ -43,9 +85,10 @@ main aside {
 }
 main aside .info-cards {
   width: 348px;
-  background-color: #302f3d;
+  background-color: var(--bg-card);
   padding-left: 40px;
   border-radius: 10px;
+  transition: 0.3s ease-in;
 }
 main aside .me {
   padding-left: 0;
@@ -95,21 +138,21 @@ main aside .techs h3 {
   margin-bottom: 2rem;
 }
 
-main aside .techs .tachs-container {
+main aside .techs .techs-container {
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
   padding-left: 1rem;
 }
-main aside .techs .tachs-container span {
+main aside .techs .techs-container span {
   display: flex;
   justify-content: center;
   font-size: 10px;
   width: 86px;
   padding: 3px 3px;
-  background-color: #cb92b1;
+  background-color: var(--bg-techs);
   border-radius: 30px;
-  color: #000000;
+  color: var(--techs-text);
 }
 
 main aside .experiences {
@@ -169,7 +212,9 @@ section .title {
   align-items: center;
   justify-content: space-between;
   padding: 3rem;
-  background-color: #302f3d;
+  background-color: var(--bg-card);
+  transition: 0.3s ease-in;
+
   border-radius: 20px;
 }
 section .projects-container {
@@ -186,7 +231,9 @@ section .projects-container .project {
   max-width: 461px;
   height: 186px;
   padding: 3rem;
-  background-color: #302f3d;
+  background-color: var(--bg-card);
+  transition: 0.3s ease-in;
+
   border-radius: 20px;
   position: relative;
   overflow: hidden;
