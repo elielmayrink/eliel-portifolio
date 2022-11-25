@@ -295,4 +295,9 @@ section .projects-container .project .project-complement div span {
     flex-wrap: wrap;
     justify-content: center;
   }
+
+  main aside .techs .techs-container {
+    gap: 5px;
+    justify-content: center;
+  }
 }
