@@ -306,3 +306,9 @@ section .projects-container .project .project-complement div span {
     justify-content: center;
   }
 }
+@media (max-width: 550px) {
+  section .title {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
