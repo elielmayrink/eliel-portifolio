@@ -32,27 +32,22 @@ ${
 </p>
   </div>
   <div class="project-complement">
-<div>
-<span
-  ><img src="./assets/imagens/icons/star.png" alt="" />${
-    repos[i].stargazers_count
-  }</span
->
-<span
-  ><img
-    src="./assets/imagens/icons/git-branch.png"
-    alt=""
-  />1</span
->
-</div>
-<div>
-<span
-  ><img
-    src="./assets/imagens/icons/Ellipse.png"
-    alt=""
-  />${repos[i].language ? repos[i].language : "HTML"}</span
->
-</div>
+    <div>
+      <span>
+        <img src="./assets/imagens/icons/star.png" alt="" />
+        ${repos[i].stargazers_count}
+      </span>
+      <span>
+        <img src="./assets/imagens/icons/git-branch.png" alt=""/>
+        1
+      </span>
+    </div>
+    <div>
+      <span>
+        <img src="./assets/imagens/icons/Ellipse.png" alt=""/>
+        ${repos[i].language ? repos[i].language : "HTML"}
+      </span>
+    </div>
   </div>`;
     projects.appendChild(project);
   }
