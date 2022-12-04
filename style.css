@@ -235,6 +235,9 @@ section .projects-container a {
   width: 100%;
   max-width: 461px;
 }
+section .projects-container a:hover {
+  opacity: 1;
+}
 section .projects-container a .project {
   width: 100%;
   display: flex;
@@ -249,7 +252,7 @@ section .projects-container a .project {
   overflow: hidden;
   cursor: pointer;
 }
-section .projects-container a:has(.project:hover) .project:not(:hover) {
+section .projects-container:has(.project:hover) .project:not(:hover) {
   opacity: 0.6;
   scale: 0.96;
 }
