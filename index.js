@@ -18,42 +18,46 @@ async function getGithubRepos() {
   }));
   console.log(repos);
   for (let i = 0; i < repos.length; i++) {
+    const link = document.createElement("a");
+    link.href = repos[i].url;
+    link.target = "_blanck";
     const project = document.createElement("div");
     project.className = "project";
-    project.innerHTML = `<a href=${repos[i].url} target="_blanck">
+    project.innerHTML = `
     <div class="project-name">
     <img src="./assets/imagens/icons/folder.png" alt="" />
     <h5>${repos[i].name}</h5>
-  </div>
-  <div class="project-description">
-<p>
-${
-  repos[i].description
-    ? repos[i].description
-    : "Repositório sem descrição adicional"
-}
-</p>
-  </div>
-  <div class="project-complement">
-    <div>
-      <span>
-        <img src="./assets/imagens/icons/star.png" alt="" />
-        ${repos[i].stargazers_count}
-      </span>
-      <span>
-        <img src="./assets/imagens/icons/git-branch.png" alt=""/>
-        1
-      </span>
     </div>
-    <div>
+    <div class="project-description">
+    <p>
+    ${
+      repos[i].description
+        ? repos[i].description
+        : "Repositório sem descrição adicional"
+    }
+        </p>
+      </div>
+      <div class="project-complement">
+      <div>
       <span>
-        <img src="./assets/imagens/icons/Ellipse.png" alt=""/>
-        ${repos[i].language ? repos[i].language : "HTML"}
-      </span>
-    </div>
-  </div>
-  </a>`;
-    projects.appendChild(project);
+            <img src="./assets/imagens/icons/star.png" alt="" />
+            ${repos[i].stargazers_count}
+          </span>
+          <span>
+            <img src="./assets/imagens/icons/git-branch.png" alt=""/>
+            1
+            </span>
+            </div>
+            <div>
+            <span>
+            <img src="./assets/imagens/icons/Ellipse.png" alt=""/>
+            ${repos[i].language ? repos[i].language : "HTML"}
+            </span>
+            </div>
+            </div>
+            `;
+    link.appendChild(project);
+    projects.appendChild(link);
   }
 }
 projects.addEventListener("load", getGithubRepos());

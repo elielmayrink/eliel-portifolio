@@ -231,10 +231,12 @@ section .projects-container {
   justify-content: space-between;
   gap: 3rem;
 }
-
-section .projects-container .project {
+section .projects-container a {
   width: 100%;
   max-width: 461px;
+}
+section .projects-container a .project {
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -247,12 +249,12 @@ section .projects-container .project {
   overflow: hidden;
   cursor: pointer;
 }
-section .projects-container:has(.project:hover) .project:not(:hover) {
+section .projects-container a:has(.project:hover) .project:not(:hover) {
   opacity: 0.6;
   scale: 0.96;
 }
 
-section .projects-container .project .project-name {
+section .projects-container a .project .project-name {
   display: flex;
   align-items: center;
   gap: 16px;
@@ -260,7 +262,7 @@ section .projects-container .project .project-name {
   font-weight: 700;
 }
 
-section .projects-container .project .project-description p {
+section .projects-container a .project .project-description p {
   font-size: 1.4rem;
   overflow: hidden;
   line-height: 20px;
@@ -270,26 +272,26 @@ section .projects-container .project .project-description p {
   -webkit-box-orient: vertical;
 }
 
-section .projects-container .project .project-complement {
+section .projects-container a .project .project-complement {
   display: flex;
   width: 100%;
   justify-content: space-between;
   bottom: 32px;
 }
 
-section .projects-container .project .project-complement div {
+section .projects-container a .project .project-complement div {
   display: flex;
   align-items: center;
   gap: 16px;
 }
-section .projects-container .project .project-complement div span {
+section .projects-container a .project .project-complement div span {
   display: flex;
   gap: 6px;
   align-items: center;
 }
 
 @media (max-width: 1440px) {
-  section .projects-container .project {
+  section .projects-container a .project {
     max-width: none;
   }
 }
