@@ -245,6 +245,11 @@ section .projects-container .project {
   border-radius: 20px;
   position: relative;
   overflow: hidden;
+  cursor: pointer;
+}
+section .projects-container:has(.project:hover) .project:not(:hover) {
+  opacity: 0.6;
+  scale: 0.96;
 }
 
 section .projects-container .project .project-name {
@@ -253,7 +258,6 @@ section .projects-container .project .project-name {
   gap: 16px;
   font-size: 1.6rem;
   font-weight: 700;
-  margin-bottom: 22px;
 }
 
 section .projects-container .project .project-description p {

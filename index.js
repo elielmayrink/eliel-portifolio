@@ -14,11 +14,14 @@ async function getGithubRepos() {
     stargazers_count: repo.stargazers_count,
     language: repo.language,
     description: repo.description,
+    url: repo.html_url,
   }));
+  console.log(repos);
   for (let i = 0; i < repos.length; i++) {
     const project = document.createElement("div");
     project.className = "project";
-    project.innerHTML = `<div class="project-name">
+    project.innerHTML = `<a href=${repos[i].url} target="_blanck">
+    <div class="project-name">
     <img src="./assets/imagens/icons/folder.png" alt="" />
     <h5>${repos[i].name}</h5>
   </div>
@@ -48,7 +51,8 @@ ${
         ${repos[i].language ? repos[i].language : "HTML"}
       </span>
     </div>
-  </div>`;
+  </div>
+  </a>`;
     projects.appendChild(project);
   }
 }
