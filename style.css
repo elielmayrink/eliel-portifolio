@@ -49,7 +49,7 @@ a {
   text-decoration: none;
   color: var(--text-color);
   font-size: 1.4rem;
-  transition: 0.3s ease-in;
+  transition: 0.3s ease-in-out;
 }
 a:hover {
   opacity: 0.7;
@@ -69,7 +69,7 @@ main {
   padding-top: 10rem;
   display: flex;
   justify-content: center;
-  transition: 0.3s ease-in;
+  transition: 0.3s ease-in-out;
   gap: 6rem;
 }
 main .swith-theme {
@@ -94,7 +94,7 @@ main aside .info-cards {
   background-color: var(--bg-card);
   padding-left: 40px;
   border-radius: 10px;
-  transition: 0.3s ease-in;
+  transition: 0.3s ease-in-out;
 }
 main aside .me {
   padding-left: 0;
@@ -219,7 +219,7 @@ section .title {
   justify-content: space-between;
   padding: 3rem;
   background-color: var(--bg-card);
-  transition: 0.3s ease-in;
+  transition: 0.3s ease-in-out;
 
   border-radius: 20px;
 }
@@ -246,7 +246,7 @@ section .projects-container a .project {
   height: 186px;
   padding: 3rem;
   background-color: var(--bg-card);
-  transition: 0.3s ease-in;
+  transition: 0.3s ease-in-out;
   border-radius: 20px;
   position: relative;
   overflow: hidden;
