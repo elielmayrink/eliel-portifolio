@@ -775,10 +775,63 @@ body {
   background: var(--bg-primary);
 }
 
+.education-stats {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-bottom: 4rem;
+  flex-wrap: wrap;
+}
+
+.education-stat {
+  text-align: center;
+  background: var(--bg-secondary);
+  padding: 2rem;
+  border-radius: 1.2rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  min-width: 150px;
+}
+
+.education-stat .stat-number {
+  display: block;
+  font-size: 3.2rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  margin-bottom: 0.8rem;
+}
+
+.education-stat .stat-label {
+  font-size: 1.4rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
 .education-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 2.4rem;
+  max-height: 600px;
+  overflow-y: auto;
+  padding-right: 1rem;
+}
+
+.education-grid::-webkit-scrollbar {
+  width: 6px;
+}
+
+.education-grid::-webkit-scrollbar-track {
+  background: var(--bg-tertiary);
+  border-radius: 3px;
+}
+
+.education-grid::-webkit-scrollbar-thumb {
+  background: var(--accent-primary);
+  border-radius: 3px;
+}
+
+.education-grid::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-secondary);
 }
 
 .education-item {
@@ -984,6 +1037,19 @@ body {
 
   .education-grid {
     grid-template-columns: 1fr;
+  }
+
+  .education-stats {
+    gap: 2rem;
+  }
+
+  .education-stat {
+    min-width: 120px;
+    padding: 1.6rem;
+  }
+
+  .education-stat .stat-number {
+    font-size: 2.4rem;
   }
 }
 
