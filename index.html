@@ -1,193 +1,369 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meu Portifólio</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="./assets/imagens/icons/github.png"
-    />
-  </head>
-  <body>
-    <main>
-      <div class="swith-theme">
-        <label for="light" class="swith"
-          ><input type="radio" name="theme" id="light" checked /><img
-            src="./assets/imagens/icons/light.png"
-            id="icon-sun"
-            alt="Imagem do sol"
-            width="30px"
-        /></label>
-        <label for="dark" class="swith"
-          ><input type="radio" name="theme" id="dark" /><img
-            src="./assets/imagens/icons/dark.png"
-            alt="imagem da lua"
-            width="30px"
-        /></label>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Eliel Mayrink - Desenvolvedor Full Stack</title>
+  <meta name="description"
+    content="Desenvolvedor Full Stack com foco em Node.js e SvelteKit. Transição de carreira inspiradora de mecânico para desenvolvedor." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/x-icon" href="./assets/imagens/icons/github.png" />
+</head>
+
+<body>
+  <!-- Theme Switcher -->
+  <div class="theme-switcher">
+    <button class="theme-btn" id="light-theme">
+      <img src="./assets/imagens/icons/light.png" alt="Tema claro" />
+    </button>
+    <button class="theme-btn active" id="dark-theme">
+      <img src="./assets/imagens/icons/dark.png" alt="Tema escuro" />
+    </button>
+  </div>
+
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span>EM</span>
       </div>
-      <aside class="my-infos">
-        <div class="info-cards me">
-          <img
-            src="./assets/imagens/my-face.png"
-            alt="Minha foto do perfil do github, homem de oculos cabelos curtos e barba cerrada"
-            class="my-face"
-          />
-          <h1>Eliel Mayrink</h1>
-          <p>Desenvolvedor web</p>
+      <ul class="nav-menu">
+        <li><a href="#home">Início</a></li>
+        <li><a href="#about">Sobre</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#projects">Projetos</a></li>
+        <li><a href="#experience">Experiência</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span>🚀 Transição de Carreira Inspiradora</span>
         </div>
-        <div class="links info-cards">
-          <nav>
-            <div class="link-item">
-              <img src="./assets/imagens/icons/map-pin.png" alt="" />
-              <a href=""><span>Brasil</span></a>
-            </div>
-            <div class="link-item">
-              <img src="./assets/imagens/icons/briefcase.png" alt="" />
-              <a href="https://www.organizze.com.br/" target="_blank"
-                ><span>Organizze</span></a
-              >
-            </div>
-            <div class="link-item">
-              <img src="./assets/imagens/icons/github.png" alt="" />
-              <a href="https://github.com/elielmayrink" target="_blank"
-                ><span>elielmayrink</span></a
-              >
-            </div>
-            <div class="link-item">
-              <img
-                src="./assets/imagens/icons/gitlab-logo.png"
-                width="25"
-                alt=""
-              />
-              <a href="https://gitlab.com/elidev" target="_blank"
-                ><span>elidev</span></a
-              >
-            </div>
-            <div class="link-item">
-              <img src="./assets/imagens/icons/linkedin.png" alt="" />
-              <a
-                href="https://www.linkedin.com/in/eliel-mayrink-71a042211"
-                target="_blank"
-                ><span>Eliel Mayrink</span></a
-              >
-            </div>
-            <div class="link-item">
-              <img src="./assets/imagens/icons/globe.png" alt="" />
-              <a
-                href="https://elielmayrink.github.io/eliel-portifolio/"
-                target="_blank"
-                ><span>site</span></a
-              >
-            </div>
-            <div class="link-item">
-              <img src="./assets/imagens/icons/mail.png" alt="" />
-              <a href="#"><span>elielmayrink2@gmail.com</span></a>
-            </div>
-          </nav>
+        <h1 class="hero-title">
+          De Mecânico a
+          <span class="gradient-text">Desenvolvedor Full Stack</span>
+        </h1>
+        <p class="hero-description">
+          Há seis anos, decidi trilhar um caminho completamente novo e desafiador ao deixar minha carreira como
+          mecânico e me aventurar no mundo do desenvolvimento. Hoje sou um desenvolvedor Full Stack apaixonado por criar
+          soluções inovadoras.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">Ver Projetos</a>
+          <a href="#about" class="btn btn-secondary">Conhecer Mais</a>
         </div>
-        <div class="techs info-cards">
-          <div>
-            <h3>Tecnologias</h3>
+      </div>
+      <div class="hero-image">
+        <img src="./assets/imagens/my-face.jpeg" alt="Eliel Mayrink - Desenvolvedor Full Stack" />
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number">4+</span>
+            <span class="stat-label">Anos de Experiência</span>
           </div>
-          <div class="techs-container">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JAVASCRIPT</span>
-            <span>REACTJS</span>
-            <span>REMIX.RUN</span>
-            <span>NEXTJS</span>
-            <span>TAILWIND</span>
-            <span>svelt</span>
-            <span>GIT</span>
+          <div class="stat">
+            <span class="stat-number">15+</span>
+            <span class="stat-label">Projetos Concluídos</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number">8+</span>
+            <span class="stat-label">Tecnologias</span>
           </div>
         </div>
-        <div class="experiences info-cards">
-          <h3>Experiências</h3>
-          <div class="experience-container">
-            <ul>
-              <li>
-                <p>Organizze</p>
-                <span>2020 - atualmente</span>
-                <span>Web-developer</span>
-              </li>
-            </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-header">
+        <h2>Sobre Mim</h2>
+        <p>Minha jornada de transformação e crescimento profissional</p>
+      </div>
+      <div class="about-content">
+        <div class="about-text">
+          <h3>Uma História de Superação</h3>
+          <p>
+            Minha transição de mecânico para desenvolvedor representa muito mais que uma mudança de carreira - é a prova
+            de que com determinação e paixão, qualquer sonho é possível. Hoje, posso me orgulhar de ser um desenvolvedor
+            Full Stack com expertise em Node.js e SvelteKit.
+          </p>
+          <p>
+            Minha busca constante por conhecimento me levou a dominar tecnologias como Python, Django, React, Remix e
+            Next.js, sempre mantendo-me atualizado com as demandas do mercado de tecnologia.
+          </p>
+          <div class="about-highlights">
+            <div class="highlight">
+              <span class="highlight-icon">🎯</span>
+              <div>
+                <h4>Foco em Resultados</h4>
+                <p>Desenvolvimento de APIs RESTful robustas e soluções completas</p>
+              </div>
+            </div>
+            <div class="highlight">
+              <span class="highlight-icon">🚀</span>
+              <div>
+                <h4>Aprendizado Contínuo</h4>
+                <p>Sempre em busca de novas tecnologias e melhores práticas</p>
+              </div>
+            </div>
+            <div class="highlight">
+              <span class="highlight-icon">💡</span>
+              <div>
+                <h4>Proatividade</h4>
+                <p>Identifico oportunidades e contribuo ativamente em projetos inovadores</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="jobs info-cards">
-          <h3>Jobs</h3>
-          <div class="jobs-container">
-            <ul>
-              <li>
-                <a href="https://www.organizze.com.br/" target="_blank">
-                  <p>Organizze-site</p>
-                </a>
-              </li>
-              <li>
-                <a href="https://blog.organizze.com.br/" target="_blank">
-                  <p>Organizze-blog</p>
-                </a>
-              </li>
-              <li>
-                <a href="https://promo.organizze.com.br/" target="_blank">
-                  <p>Organizze-promos</p>
-                </a>
-              </li>
-              <li>
-                <a href="./rocketShoes">
-                  <p>Desafio rocketseat RocketShoes</p>
-                </a>
-              </li>
-            </ul>
+        <div class="about-links">
+          <div class="contact-info">
+            <h3>Contato</h3>
+            <div class="contact-item">
+              <img src="./assets/imagens/icons/mail.png" alt="Email" />
+              <a href="mailto:elielmayrink2@gmail.com">elielmayrink2@gmail.com</a>
+            </div>
+            <div class="contact-item">
+              <img src="./assets/imagens/icons/map-pin.png" alt="Localização" />
+              <span>Brasil</span>
+            </div>
+            <div class="contact-item">
+              <img src="./assets/imagens/icons/briefcase.png" alt="Empresa" />
+              <a href="https://www.organizze.com.br/" target="_blank">Organizze</a>
+            </div>
+          </div>
+          <div class="social-links">
+            <h3>Redes Sociais</h3>
+            <div class="social-grid">
+              <a href="https://github.com/elielmayrink" target="_blank" class="social-link">
+                <img src="./assets/imagens/icons/github.png" alt="GitHub" />
+                <span>GitHub</span>
+              </a>
+              <a href="https://gitlab.com/elidev" target="_blank" class="social-link">
+                <img src="./assets/imagens/icons/gitlab-logo.png" alt="GitLab" />
+                <span>GitLab</span>
+              </a>
+              <a href="https://www.linkedin.com/in/eliel-mayrink-71a042211" target="_blank" class="social-link">
+                <img src="./assets/imagens/icons/linkedin.png" alt="LinkedIn" />
+                <span>LinkedIn</span>
+              </a>
+              <a href="https://elielmayrink.github.io/eliel-portifolio/" target="_blank" class="social-link">
+                <img src="./assets/imagens/icons/globe.png" alt="Website" />
+                <span>Website</span>
+              </a>
+            </div>
           </div>
         </div>
-        <div class="education info-cards">
-          <h3>Educação</h3>
-          <div class="education-container">
-            <ul class="">
-              <li class="education-item">
-                <p class="">Cod3r</p>
-                <span class=""> 2021 - 2022 </span>
-                <span class=""> javaScript funcional e reativo </span>
-              </li>
-              <li class="education-item">
-                <p class="">Cod3r</p>
-                <span class=""> 2021 - 2021 </span>
-                <span class=""> NextJs </span>
-              </li>
-              <li class="education-item">
-                <p class="">Cod3r</p>
-                <span class=""> 2021 - 2021 </span>
-                <span class=""> Fundamento do javaScript funcional </span>
-              </li>
-              <li class="education-item">
-                <p class="">Udemy</p>
-                <span class=""> 2019 - 2019 </span>
-                <span class=""> Curso web: HTML CSS JS </span>
-              </li>
-            </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <div class="section-header">
+        <h2>Habilidades & Tecnologias</h2>
+        <p>Stack tecnológico que domino e utilizo diariamente</p>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Frontend</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">React</span>
+            <span class="skill-tag">SvelteKit</span>
+            <span class="skill-tag">Next.js</span>
+            <span class="skill-tag">Remix</span>
+            <span class="skill-tag">HTML</span>
+            <span class="skill-tag">CSS</span>
+            <span class="skill-tag">JavaScript</span>
+            <span class="skill-tag">Tailwind</span>
           </div>
         </div>
-      </aside>
-      <section>
-        <div class="title">
-          <h2>Meus Projetos</h2>
-          <a href="https://github.com/elielmayrink" target="_blank">
-            Ver todos os projetos
-          </a>
+        <div class="skill-category">
+          <h3>Backend</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Node.js</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">Django</span>
+            <span class="skill-tag">APIs RESTful</span>
+          </div>
         </div>
-        <div id="projects" class="projects-container"></div>
-      </section>
-    </main>
-    <script src="./index.js"></script>
-  </body>
+        <div class="skill-category">
+          <h3>Banco de Dados</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">PostgreSQL</span>
+            <span class="skill-tag">SQLite</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3>Ferramentas</h3>
+          <div class="skill-tags">
+            <span class="skill-tag">Git</span>
+            <span class="skill-tag">GitHub</span>
+            <span class="skill-tag">GitLab</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <div class="section-header">
+        <h2>Projetos em Destaque</h2>
+        <p>Alguns dos projetos que desenvolvi ao longo da minha jornada</p>
+      </div>
+      <div class="featured-projects">
+        <div class="featured-project">
+          <div class="project-content">
+            <h3>Cha de Revelação Online</h3>
+            <p>Aplicativo web para gerenciamento de chás de revelação, desenvolvido com tecnologias modernas para
+              facilitar a organização de eventos especiais.</p>
+            <div class="project-tech">
+              <span>SvelteKit</span>
+              <span>Node.js</span>
+              <span>PostgreSQL</span>
+            </div>
+            <a href="https://chaderevelacao.com.br/" target="_blank" class="project-link">Ver Projeto →</a>
+          </div>
+        </div>
+        <div class="featured-project">
+          <div class="project-content">
+            <h3>Organizze</h3>
+            <p>Plataforma completa de gestão financeira pessoal, incluindo site principal, blog e sistema de promoções.
+              Desenvolvido com foco em experiência do usuário.</p>
+            <div class="project-tech">
+              <span>SvelteKit</span>
+              <span>Node.js</span>
+              <span>Tailwind</span>
+            </div>
+            <a href="https://www.organizze.com.br/" target="_blank" class="project-link">Ver Projeto →</a>
+          </div>
+        </div>
+      </div>
+      <div class="projects-header">
+        <h3>Outros Projetos</h3>
+        <a href="https://github.com/elielmayrink" target="_blank" class="view-all">Ver todos no GitHub →</a>
+      </div>
+      <div id="projects-grid" class="projects-grid"></div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="experience">
+    <div class="container">
+      <div class="section-header">
+        <h2>Experiência Profissional</h2>
+        <p>Minha evolução na área de desenvolvimento</p>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Full Stack Developer</h3>
+              <span class="timeline-company">CDR Serviços Online</span>
+              <span class="timeline-period">2023 - 2025</span>
+            </div>
+            <p>Desenvolvimento de aplicações web completas, trabalhando com Node.js no backend e SvelteKit no frontend.
+              Criação de APIs RESTful e implementação de soluções escaláveis.</p>
+          </div>
+        </div>
+        <div class="timeline-item">
+          <div class="timeline-marker"></div>
+          <div class="timeline-content">
+            <div class="timeline-header">
+              <h3>Web Developer</h3>
+              <span class="timeline-company">Organizze</span>
+              <span class="timeline-period">2020 - 2023</span>
+            </div>
+            <p>Desenvolvimento frontend para plataforma de gestão financeira, incluindo site principal, blog e sistema
+              de promoções. Foco em experiência do usuário e performance.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section class="education">
+    <div class="container">
+      <div class="section-header">
+        <h2>Formação & Cursos</h2>
+        <p>Investimento contínuo em conhecimento</p>
+      </div>
+      <div class="education-grid">
+        <div class="education-item">
+          <div class="education-header">
+            <h3>JavaScript Funcional e Reativo</h3>
+            <span class="education-school">Cod3r</span>
+            <span class="education-period">2021 - 2022</span>
+          </div>
+        </div>
+        <div class="education-item">
+          <div class="education-header">
+            <h3>Next.js</h3>
+            <span class="education-school">Cod3r</span>
+            <span class="education-period">2021</span>
+          </div>
+        </div>
+        <div class="education-item">
+          <div class="education-header">
+            <h3>Fundamentos do JavaScript Funcional</h3>
+            <span class="education-school">Cod3r</span>
+            <span class="education-period">2021</span>
+          </div>
+        </div>
+        <div class="education-item">
+          <div class="education-header">
+            <h3>Curso Web: HTML, CSS, JS</h3>
+            <span class="education-school">Udemy</span>
+            <span class="education-period">2019</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-text">
+          <h3>Eliel Mayrink</h3>
+          <p>Desenvolvedor Full Stack apaixonado por criar soluções inovadoras</p>
+        </div>
+        <div class="footer-links">
+          <a href="mailto:elielmayrink2@gmail.com">elielmayrink2@gmail.com</a>
+          <div class="footer-social">
+            <a href="https://github.com/elielmayrink" target="_blank">
+              <img src="./assets/imagens/icons/github.png" alt="GitHub" />
+            </a>
+            <a href="https://www.linkedin.com/in/eliel-mayrink-71a042211" target="_blank">
+              <img src="./assets/imagens/icons/linkedin.png" alt="LinkedIn" />
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Eliel Mayrink. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./index.js"></script>
+</body>
+
 </html>
